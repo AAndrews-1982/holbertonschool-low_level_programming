@@ -2,6 +2,7 @@
 /**
  * main - prints line of text using puts
  * Return 0
+ *
  */
 int main(void)
         {	
