@@ -1,2 +1,3 @@
 #!/bin/bash
-gcc $CFILE -E -o c
+#include <stdio.h>
+gcc -E $CFILE -o c
