@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - display alphabet minus 'q' and 'e'
+ * main - display alphabet minus q and e
  *
  */
 int main(void)
