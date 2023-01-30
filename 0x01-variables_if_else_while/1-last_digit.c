@@ -18,16 +18,16 @@ int main(void)
 	last = n % 10;
 	if (last == 0)
 	{
-		printf("last digit of %d is %d and is 0\n", n, last);
+		printf("Last digit of %d is %d and is 0\n", n, last);
 	}
 	else if (last > 5)
 	{
-		printf("last digit of %d is %d", n, last);
+		printf("Last digit of %d is %d", n, last);
 		printf("and is greater than 5\n");
 	}
 	else if (last < 6)
 	}
-		printf("last digit of %d is %d", n, last);
+		printf("Last digit of %d is %d", n, last);
 		printf("and is less than 6 and not 0\n");	
 	}
 
