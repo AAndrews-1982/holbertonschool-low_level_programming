@@ -11,7 +11,7 @@ int main(void)
 
 	character = 'z';
 	while (character >= 'a')
-	}
+	{
 		putchar(character);
 		character--;
 	}
