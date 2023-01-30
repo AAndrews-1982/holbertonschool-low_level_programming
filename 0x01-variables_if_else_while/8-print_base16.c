@@ -1,10 +1,10 @@
-/*
+#include <stdio.h>
+
+/**
  * main - print base 16 in lowercase
  *
  * Return: 0
  */
-
-#include <stdio.h>
 int main (void)
 {
 	int num;
@@ -16,7 +16,7 @@ int main (void)
 	for (letter = 'a'; letter <= 'f'; letter++)
 		putchar(letter);
 	{
-	putchar('\n');
+		putchar('\n');
 	}
 	return (0);
 }
