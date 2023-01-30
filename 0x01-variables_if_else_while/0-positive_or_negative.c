@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - assign random numbers to variable each time it is executed, prints whether it is positive or negative.
+ * main - assign random numbers to variable and print if variable is +, -, or 0.
  *
  * Return:0
  */
