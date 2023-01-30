@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - displays zero through nine.
+ * main - prints 0-9
  *
  * Return: 0
  */
@@ -13,6 +13,6 @@ int main(void)
 	{
 		putchar(i);
 	}
-	printchar('\n');
+	putchar('\n');
 	return (0);
 }
