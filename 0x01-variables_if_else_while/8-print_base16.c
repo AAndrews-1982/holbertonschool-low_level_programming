@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - print base 16 in lowercase
  *
