@@ -5,7 +5,7 @@
 /**
  * main - print random number to display different properties.
  *
- * returnd: 0
+ * return: 0
  */
 int main(void)
 {
