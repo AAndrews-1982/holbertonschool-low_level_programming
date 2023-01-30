@@ -11,10 +11,10 @@ int main(void)
 
 	character = 'z';
 	while (character >= 'a')
-}
-putchar(character);
-character--;
-}
-putchar('\n');
-return (0);
+	}
+		putchar(character);
+		character--;
+	}
+	putchar('\n');
+	return (0);
 }
