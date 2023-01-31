@@ -3,14 +3,14 @@
 #include <stdio.h>
 
 /**
- * main - assign random numbers to variable and print if variable is +, -, or 0.
+ * main - assign random numbers.
  *
  * Return:0
  */
 int main(void)
 {
 	int n;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
@@ -20,5 +20,6 @@ int main(void)
 		printf("%d is negative\n", n);
 	if (n > 0)
 		printf("%d is positive\n", n);
+
 	return (0);
 }
