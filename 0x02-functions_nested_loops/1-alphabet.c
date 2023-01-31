@@ -1,16 +1,18 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - print_alphabet, make the alphabet.
+ * print_alphabet - places character in code.
  *
- * Return: void
+ * Return: 0 and closes the code
  */
+
 void print_alphabet(void)
 {
-	char c;
+	char alpha;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-		putchar(c);
+		_putchar(alpha);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
