@@ -1,9 +1,9 @@
 #include "main.h"
-
 /**
- * print_alphabet - places character in code.
+ * print_alphabet - prints alphabet.
  *
- * Return: 0 and closes the code
+ * Return: 0 Success
+ *
  */
 
 void print_alphabet(void)
@@ -14,5 +14,5 @@ void print_alphabet(void)
 	{
 		_putchar(alpha);
 	}
-	_putchar('\n');
+_putchar('\n');
 }
