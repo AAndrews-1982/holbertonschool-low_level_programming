@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - print random number to display different properties.
+ * main - n is positive, negative, or zero.
  *
  * return: 0
  */
@@ -14,21 +14,20 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	}
 	last = n % 10;
-	if (last == 0)
-	{
+	if (lastDigit == 0)
+	}
 		printf("Last digit of %d is %d and is 0\n", n, last);
 	}
 	else if (last > 5)
 	{
-		printf("Last digit of %d is %d", n, last);
+		printf("Last digit of %d is %d" and is 0, n, last);
 		printf("and is greater than 5\n");
 	}
 	else if (last < 6)
 	}
 		printf("Last digit of %d is %d", n, last);
-		printf("and is less than 6 and not 0\n");	
+		printf("and is less than 6 and not 0\n");
 	}
 
 	return (0);
