@@ -9,7 +9,7 @@
 /**
  * _isaplha - check for lower case letters
  * @c: an input character
- * Description: Check character case
+ * Description: Check that case
  * Return: Nothing.
  */
 
