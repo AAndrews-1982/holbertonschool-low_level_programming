@@ -1,18 +1,27 @@
-#include "main.h"
-/**
- * _abs - main function
- * @i: main code integer
- * Return: 0 and closes
+/*
+ * File 6-abs.c
+ * Auth: Alton Andrews
  */
-int _abs(int i)
+
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * _abs - print sign of number
+ * @n: a variable number
+ * Description: absolute value
+ * Return: 1, 0, or -1
+ */
+
+int _abs(int n)
 {
-	if (i >= 0)
+	if (n >= 0)
 	{
-		return (i);
+		return (n);
 	}
-	else if (i < 0)
+	else
 	{
-		return (-i);
+		n = n * -1;
+		return (n);
 	}
-	return (0);
 }
