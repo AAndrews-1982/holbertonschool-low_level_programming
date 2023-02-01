@@ -1,21 +1,29 @@
-#include <stdio.h>
-/**
- * main - print base 16 in lowercase
- *
- * Return: 0
+/*
+ * File 8-print_base16.c
+ * Auth: Alton Andrews
  */
-int main (void)
-{
-	int num;
-	char letter;
-	
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
 
-	for (letter = 'a'; letter <= 'f'; letter++)
-		putchar(letter);
+#include <stdio.h>
+
+/**
+ * main - Hexadecimal
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int ch;
+
+	for (ch = '0' ; ch <= '9' ; ch++)
 	{
-		putchar('\n');
+		putchar(ch);
 	}
+	for (ch  = 'a' ; ch <= 'f' ; ch++)
+	{
+		putchar(ch);
+	}
+	putchar('\n');
+
 	return (0);
 }
