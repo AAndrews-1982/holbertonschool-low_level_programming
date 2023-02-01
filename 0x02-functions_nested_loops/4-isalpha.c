@@ -1,5 +1,5 @@
  /*
-  * File 4_isalpha.c
+  * File 4-isalpha.c
   * Auth: Alton Andrews
   */
 
@@ -7,7 +7,7 @@
 #include "main.h"
 
 /**
- * _isaplha - check for lower case letters
+ * _isalpha - check for lower case letters
  * @c: an input character
  * Description: Check that case
  * Return: Nothing.
