@@ -1,20 +1,26 @@
+/*
+ * File 4-print_alphabt.c
+ * Auth: Alton Andrews
+ */
+
 #include <stdio.h>
 
 /**
- * main - display alphabet minus q and e
+ * main - Alphabet soup -q & e
  *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int character;
+	char ch;
 
-	character = 'a';
-	while (character <= 'z')
+	for (ch = 'a' ; ch <= 'z' ; ch++)
 	{
-		if (character != 'q' && character != 'e')
-		putchar(character);
-		character++;
+		if (ch != 'q' && ch != 'e')
+			putchar(ch);
 	}
 	putchar('\n');
+
 	return (0);
 }
