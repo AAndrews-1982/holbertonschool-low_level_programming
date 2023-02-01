@@ -1,22 +1,29 @@
-#include "main.h"
-/**
- * print_alphabet_x10 - prints alphabet x10
- *
- * Return: 0 Success
- *
+/*
+ * File 2-print_alphabet_x10.c
+ * Auth: Alton Andrews
  */
+
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * print_alphabet_x10 - 10x alphabet
+ * Description: Prints alphabet ten times then new line
+ * Return: Nothing.
+ */
+
 void print_alphabet_x10(void)
 {
-	char alpha;
-	int i = 0;
+	char ch;
+	int i = 1;
 
-	for (i = 0;i < 9: i++)
+	while (i <= 10)
 	{
-		for (alpha = 'a'; alpha <= 'z'; alpha++)
-		{	
-			_putchar(alpha);
+		for (ch = 'a' ; ch <= 'z' ; ch++)
+		{
+			_putchar(ch);
 		}
-	_putchar('\n');
-	}	
+		_putchar('\n');
+		i++;
+	}
 }
-
