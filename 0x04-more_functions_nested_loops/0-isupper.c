@@ -1,15 +1,14 @@
 /*
- *  File 0-isupper.c
+ *  File: 0-isupper.c
  *  Auth: Alton Andrews
  */
 
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _isupper - check is upper
+ * _isupper - check for uppercase.
  * @c: input char
- * Description: check if char is upper case
+ * Description: Check if char is upper case.
  * Return: 1 if upper, 0 otherwise
  */
 
@@ -21,6 +20,6 @@ int _isupper(int c)
 	}
 	else
 	{
-		return (0);
+	return (0);
 	}
 }
