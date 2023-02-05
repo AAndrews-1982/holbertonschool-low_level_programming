@@ -6,7 +6,8 @@
 #include "main.h"
 
 /**
- * _puts - Prints a string, followed by a new line to stdout.
+ * _puts - Prints a string followed by a new line to stdout.
+ * @str: String Value
  * Return: Nothing
  */
 
