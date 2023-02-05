@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * *strcpy  - Copy strings to buffer.
+ * *_strcpy  - Copy strings to buffer.
  * @dest: Destination
  * @src: Source
  * Return: The pointer to destination.
