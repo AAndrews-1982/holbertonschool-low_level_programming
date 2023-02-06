@@ -1,5 +1,5 @@
 /*
- * File 5-more_numbers.c
+ * File: 5-more_numbers.c
  * Auth: Alton Andrews
  */
 

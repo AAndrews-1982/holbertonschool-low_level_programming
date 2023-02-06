@@ -1,5 +1,5 @@
 /*
- * File 6-print_line.c
+ * File: 6-print_line.c
  * Auth: Alton Andrews
  */
 
@@ -9,6 +9,7 @@
  * print_line - print a line
  * @n: Print line of length.
  * Description: Print using underscores.
+ * Return: 0
  */
 
 void print_line(int n)
