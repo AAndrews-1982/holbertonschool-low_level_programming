@@ -1,5 +1,5 @@
 /*
- * File 8-print_square
+ * File: 8-print_square
  * Auth: Alton Andrews
  */
 
