@@ -1,5 +1,5 @@
 /*
- * File 7-print_diagonal.c
+ * File: 7-print_diagonal.c
  * Auth: Alton Andrews
  */
 
@@ -31,6 +31,6 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 }
