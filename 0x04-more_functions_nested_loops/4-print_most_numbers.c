@@ -1,5 +1,5 @@
 /*
- * File 4-print_most_numbers.c
+ * File: 4-print_most_numbers.c
  * Auth: Alton Andrews
  */
 
