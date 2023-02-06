@@ -9,7 +9,7 @@
  * print_triangle - Print triangle.
  * @size: input
  * Description: Triangle hashtags.
- * Return: nothing
+ * Return: 0
  */
 
 void print_triangle(int size)
