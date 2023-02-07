@@ -6,35 +6,27 @@
 #include "main.h"
 
 /**
- * print_triangle - Print triangle.
- * @size: input
+ * print_triangle - Prints a triangle.
+ * @size: Size of triangle
  * Description: Triangle hashtags.
- * Return: 0
  */
 
 void print_triangle(int size)
 {
-	int row;
-	int spaces;
-	int hTags;
+	int i;
+	int j;
 
-	if (size > 0)
+	for (i = 0; i < size; i++)
 	{
-		for (row = 1 ; row <= size ; row++)
-		{
-			for (spaces = (size - row) ; spaces > 0 ; spaces--)
-			{
-				_putchar(' ');
-			}
-			for (hTags = 1 ; hTags <= row ; hTags++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
-	}
-	else
-	{
+		for (j = 0; j < size - i - 1; j++)
+			_putchar(' ');
+
+		for (j = 0; j <= i; j++)
+			_putchar('#');
+
 		_putchar('\n');
 	}
+
+	if (size <= 0)
+		_putchar('\n');
 }
