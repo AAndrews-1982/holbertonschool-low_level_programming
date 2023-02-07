@@ -6,7 +6,7 @@
 #include "main.h"
 
 /**
- * print_square - Prints square.
+ * print_square - Prints square followed by new line.
  * @Size: Size of square
  * Description: Print squares with hashtags.
  */
