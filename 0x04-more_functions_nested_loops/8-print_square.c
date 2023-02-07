@@ -7,7 +7,7 @@
 
 /**
  * print_square - Print squares.
- * @Size: input
+ * @Size: Size of square
  * Description: Print squares with hashtags.
  * Return: 0
  */

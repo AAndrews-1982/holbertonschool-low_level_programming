@@ -3,7 +3,6 @@
  * Auth: Alton Andrews
  */
 
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -14,28 +13,23 @@
 
 int main(void)
 {
-	int counter;
+	int i;
 
-	for (counter = 1 ; counter < 100 ; counter++)
+	for (i = 1 ; i <= 100 ; i++)
 	{
-		if ((counter % 3 == 0) && (counter % 5 == 0))
-		{
-			printf("FizzBuzz ");
-		}
-		else if (counter % 3 == 0)
-		{
-			printf("Fizz ");
-		}
-		else if (counter % 5 == 0)
-		{
-			printf("Buzz ");
-		}
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
 		else
-		{
-			printf("%d" , counter);
-		}
+			printf("%d", i);
+
+		if (i != 100)
+			printf(" ");
 	}
-	printf("Buzz\n");
+	printf("\n");
 
 	return (0);
 }

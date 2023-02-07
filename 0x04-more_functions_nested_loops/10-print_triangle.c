@@ -16,7 +16,7 @@ void print_triangle(int size)
 {
 	int row;
 	int spaces;
-	int htags;
+	int hTags;
 
 	if (size > 0)
 	{
