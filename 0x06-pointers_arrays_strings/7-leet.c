@@ -11,21 +11,24 @@
  * Return: char
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
-	int i, j;
-	char letters[] = "aAeEoOtTlL";
-	char leet[] = "40307110";
-	for (i = 0; str[i] != '\0'; i++)
+	int index = 0;
+	int counter;
+	char l33t_ch[10] = { '4', '4', '3', '3', '0', '7', '7', '1', '1' };
+	char reg_ch[10] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L' };
+
+	while (s[index])
 	{
-		for (j = 0; letters[j] != '\0'; j++)
+		for (counter = 0 ; counter < 10 ; counter++)
 		{
-			if (str[i] == letters[j])
+			if (s[index] == reg_ch[counter])
 			{
-			str[i] = leet[j / 2];
-			break;
+				s[index] = l33t_ch[counter];
 			}
 		}
+		index++;
 	}
-	return (str);
+
+	return (s);
 }
