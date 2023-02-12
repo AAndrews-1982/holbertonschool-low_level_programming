@@ -1,9 +1,10 @@
+
 /*
  * File: 6-cap_string.c
  * Auth: Alton Andrews
  */
 
-#include "holberton.h"
+int check_seperators(char c);
 
 /**
  * cap_string - function that caps all words of a string.
@@ -12,21 +13,36 @@
  */
 
 
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i;
-	for (i = 0; str[i] != '\0'; i++)
+	int i = 0;
+
+	while (s[i])
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-			str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-			str[i] == '(' || str[i] == ')' || str[i] == '{' ||
-			str[i] == '}')
-		{
-			i++;
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] = str[i] - ('a' - 'A');
-			return (str);
-		}
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
+		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
+			s[i + 1] -= 32;
+		i++;
 	}
+
+	return (s);
+}
+
+/**
+ * check_seperators - Seperators of words: space, tabulation, new line.
+ * ,, ;, ., !, ?, ", (, ), {, and }.
+ * @c: an input character
+ * Return: 1 if seperator, 0 if not.
+ */
+int check_seperators(char c)
+{
+	int i = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', };
+	for (; i < 13; i++)
+	{
+		if (c == seperators[i])
+			return (1);
+	}
+	return (0);
 }
