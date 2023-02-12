@@ -13,21 +13,21 @@
  * Return: pointer to dest
  */
 
-char *_strncat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
+	int dest_length = 0;
+	int src_len;
 
-	while (dest[i] != '\0')
-		i++;
-
-	while (src[j] != '\0')
+	while (dest[dest_length] != '\0')
 	{
-		dest[i + j] = src[j];
-		j++;
+		dest_length++;
 	}
 
-	dest[i + j] = '\0';
+	for (src_len = 0 ; src_len < n && src[src_len] != '\0' ; src_len++)
+	{
+		dest[dest_length + src_len] = src[src_len];
+	}
+	dest[dest_length + src_len] = '\0';
 
 	return (dest);
 }
