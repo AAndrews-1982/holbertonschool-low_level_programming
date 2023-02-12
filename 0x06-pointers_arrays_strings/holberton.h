@@ -1,13 +1,17 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef HEADER_H
+#define HEADER_H
+
+#include<stdio.h>
 
 int _putchar(char c);
+int _strlen(char *s);
+
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
-char *strncopy(char *dest, char *src, int n);
+char *_strncopy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
-char *string_toupper(char *);
-char *cap_string(char *);
-char *cap_string(char *);
+char *string_toupper(char *c);
+char *cap_string(char *s);
+char *leet(char *s);
 #endif
