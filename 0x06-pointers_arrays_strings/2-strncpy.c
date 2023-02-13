@@ -4,27 +4,24 @@
  */
 
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * *_strncpy - work like a strncpy
- * @dest: destination value
- * @src: source value
- * @n: int var
- * Return: pointer to dest
+ * *_strncpy - function that copies a string
+ * @dest: pointer to destination buffer
+ * @src: pointer to source string
+ * @n: maximum number of characters
+ * Return: pointer to destination buffer
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int src_len;
+	int i;
 
-	for (src_len = 0 ; src_len < n && src[src_len]  != '\0'; src_len++)
-	{
-		dest[src_len] = src[src_len];
-	}
-	for ( ; src_len < n ; src_len++)
-	{
-		dest[src_len] = '\0';
-	}
+	for (i = 0 ; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n ; i++)
+		dest[i] = '\0';
 
 	return (dest);
 }
