@@ -4,21 +4,24 @@
  */
 
 #include "main.h"
-#include <stdio.h>
+
 /**
- * *_chessboard - print chessboard
+ * @*print_chessboard - print a chessboard
+ * @a: string
  * Return: 0
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
-	for (i = 0; i < 8; i++)
+	int row;
+	int col;
+
+	for (row = 0 ; row < 8; row++)
 	{
-		for (j = 0; j < 8; j++)
-	{
-		printf("%c ", a[i][j]);
-	}
-		printf("\n");
+		for (col = 0 ; col < 8 ; col++)
+		{	
+			_putchar(a[row][col]);
+		}
+		_putchar('\n');
 	}
 }
