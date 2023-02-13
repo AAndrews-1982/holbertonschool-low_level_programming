@@ -4,45 +4,23 @@
  * Auth: Alton Andrews
  */
 
-int check_seperators(char c);
+#include "holberton.h"
 
 /**
- * cap_string - function that caps all words of a string.
- * @s: An input to capitalize letters in a string.
- * Return: pointer to s
+ * contains_sep - helper function to check if character is a separator
+ * @c: Character to check
+ * @sep: list of separators
+ * @n: length of separators
+ * Return: 1 if character is a separator, 0 otherwise
  */
 
-
-char *cap_string(char *s)
+int contains_sep(char c, int *sep, int n)
 {
-	int i = 0;
+	int i;
 
-	while (s[i])
-	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] -= 32;
-		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
-			s[i + 1] -= 32;
-		i++;
-	}
-
-	return (s);
-}
-
-/**
- * check_seperators - Seperators of words: space, tabulation, new line.
- * ,, ;, ., !, ?, ", (, ), {, and }.
- * @c: an input character
- * Return: 1 if seperator, 0 if not.
- */
-int check_seperators(char c)
-{
-	int i = 0;
-	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', };
-	for (; i < 13; i++)
-	{
-		if (c == seperators[i])
+	for (i = 0; i < n; i++)
+		if (c == sep[i])
 			return (1);
-	}
+
 	return (0);
 }
