@@ -6,7 +6,7 @@
 #include "holberton.h"
 
 /**
- * *leet - convert 10 133t
+ * *leet - convert to l33t
  * @s: char array
  * Return: char
  */
