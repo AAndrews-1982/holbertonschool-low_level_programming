@@ -15,7 +15,7 @@ char *leet(char *s)
 {
 	int index = 0;
 	int counter;
-	char l33t_ch[10] = { '4', '4', '3', '3', '0', '7', '7', '1', '1' };
+	char l33t_ch[10] = { '4', '4', '3', '3', '0', '0', '7', '7', '1', '1' };
 	char reg_ch[10] = { 'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L' };
 
 	while (s[index])
