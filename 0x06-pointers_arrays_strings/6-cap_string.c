@@ -1,38 +1,33 @@
-int check_seperators(char c);
-
-/**
- * File: 6-cap_string.c
- * Auth: Alton Andrews
- */
-
 #include "holberton.h"
-
 /**
- * @s: Input string to modify
+ * cap_string - capitalize all words of a string
+ * @s: string to cap
  *
- * Return: a pointer to a modified string
+ * Return: a pointer to a string
  */
 char *cap_string(char *s)
 {
-	int i = 0;
-	int cap_next = 1;
+	int i;
+	int prev_space = 1;
 
-	while (s[i] != '\0')
+	for (i = 0; s[i]; i++)
 	{
-		if (cap_next && (s[i] >= 'a' && s[i] <= 'z'))
+		if (prev_space && (s[i] >= 'a' && s[i] <= 'z'))
 		{
 			s[i] -= 32;
-			cap_next = 0;
 		}
 
 		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
 			|| s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?'
-			|| s[i] == '"' || s[i] == '(' || s[i] == s[i] == ')' == '{'
+			|| s[i] == '"' || s[i] == '(' || s[i] == ')' || s[i] == '{'
 			|| s[i] == '}')
 		{
-			cap_next = 1;
+			prev_space = 1;
 		}
-		i++;
+		else
+		{
+			prev_space = 0;
+		}
 	}
 
 	return (s);

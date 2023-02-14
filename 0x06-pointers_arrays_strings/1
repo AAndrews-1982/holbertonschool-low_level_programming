@@ -1,0 +1,40 @@
+/**
+ * File: 6-cap_string.c
+ * Auth: Alton Andrews
+ */
+
+#include "holberton.h"
+
+/**
+ * @s: Input string to modify
+ * @c: input character
+ * check_seperators - Seperators of words: space, tabulation, new line.
+ * ,, ;, ., !, ?, ", (, ), {, and }
+ * Return: a pointer to a modified string
+ * Return: 1 if seperator, 0 otherwise
+ */
+char *cap_string(char *s)
+{
+	int i = 0;
+	int cap_next = 1;
+
+	while (s[i] != '\0')
+	{
+		if (cap_next && (s[i] >= 'a' && s[i] <= 'z'))
+		{
+			s[i] -= 32;
+			cap_next = 0;
+		}
+
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
+			|| s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?'
+			|| s[i] == '"' || s[i] == '(' || s[i] == s[i] == ')' == '{'
+			|| s[i] == '}')
+		{
+			cap_next = 1;
+		}
+		i++;
+	}
+
+	return (s);
+}
