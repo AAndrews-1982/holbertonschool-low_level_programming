@@ -1,44 +1,39 @@
+int check_seperators(char c);
+
 /**
  * File: 6-cap_string.c
  * Auth: Alton Andrews
  */
-int check_seperators(char c);
+
+#include "holberton.h"
 
 /**
- * cap_string - function that capitalizes all words of a string
- * @c: pointer to string
+ * @s: Input string to modify
  *
- * Separators of words: Space, tabulation, new line, ,, ;, ., !, ?, ",(, ), {, and }
- *
- * Return: pointer to string
+ * Return: a pointer to a modified string
  */
 char *cap_string(char *s)
 {
 	int i = 0;
-	while (s[i])
+	int cap_next = 1;
+
+	while (s[i] != '\0')
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i + 1] -= 32;
+		if (cap_next && (s[i] >= 'a' && s[i] <= 'z'))
+		{
+			s[i] -= 32;
+			cap_next = 0;
+		}
+
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
+			|| s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?'
+			|| s[i] == '"' || s[i] == '(' || s[i] == s[i] == ')' == '{'
+			|| s[i] == '}')
+		{
+			cap_next = 1;
+		}
 		i++;
 	}
 
 	return (s);
-}
-
-/**
- * check_seperators - Seperators: space, tabs, new line
- * ,, ;, ., !, ?, ", (, ), {, and }
- * @c: input character
- * Return: 1 if character is a separator, 0 otherwise
- */
-int check_seperators(char c)
-{
-	int i = 0;
-	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}' };
-	for (i < 13; i++)
-	{
-		if (c == seperators[i])
-			return (1);
-	}
-	return (0);
 }
