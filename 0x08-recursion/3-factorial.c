@@ -7,9 +7,9 @@
 #include <stdio.h>
 
 /**
- * factorial - Return factorial of a number
- * @n: Number
- * Return: Fact of a number
+ * factorial - Return the factorial of a given number.
+ * @n: The number to find the factorial of.
+ * Return: The factorial of the given number, or -1 on error.
  */
 
 int factorial(int n)
