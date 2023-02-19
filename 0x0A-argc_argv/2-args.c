@@ -7,25 +7,21 @@
 #include <stdio.h>
 
 /**
- * main - print its name
- * @argc: argument count
- * @argv: argument vector for values
+ * main - prints the number of input args.
+ * @argc: argument count.
+ * @argv: argument vector for values.
+ * @argc[0]: is the function name.
  *
  * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	while (argc--)
+	(void) argc;/*arg c will not be used*/
+	while (*argv)
 	{
-		i++;
-	}
-	i--;
-	if (argv[0])
-	{
-		printf("%d\n", i);
+		printf("%s\n", *argv);
+		argv++;
 	}
 	return (0);
 }
