@@ -10,13 +10,12 @@
  * main - check the code
  *
  * argv[0] is function name. later positions have arguments made
- *
  *@argv: program name followed by input arguments.
- *
  *@argc: number of input arguments
  *
- * Return: 0
+ *Return: always 0
  */
+
 int main(int argc, char *argv[])
 {
 	(void) argc;
