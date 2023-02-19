@@ -1,43 +1,56 @@
 /*
- * File: 5-sqrt-recursion.c
+ * File 5-sqrt_recursion.c
  * Auth: Alton Andrews
  */
 
 #include "main.h"
 #include <stdio.h>
+int sqrt_check(int n, int f);
 
 /**
- * _sqrt_recursion - Computes the natural square root of a number.
- * @n: The number.
- * Return: The natural square root of n.
+ * _sqrt_recursion - return natural square root of n
+ * @n: int
+ * Return: square root of n
  */
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
+	if (n == 1)
+	{
+		return (1 + _sqrt_recursion(n - 1));
+	}
+	else if (n == 0)
+	{
+		return (0);
+	}
+	else if (n < 0)
+	{
 		return (-1);
+	}
 
-		return (sqrt_helper(n, 0));
+	return (sqrt_check(n, 1));
 }
 
 /**
- * sqrt_helper - Helper function to find the square root of a number.
- *
- * @n: The number to find the square root of.
- * @start: The start of the search range.
- * @end: The end of the search range.
- *
- * Return: The square root of n, or -1 if n does not have a natural square root.
+ * sqrt_check - increments a counter to check for matches
+ * @n: number
+ * @f: factor
+ * Return: the power value
  */
 
-int _sqrt_helper(int n, int i)
+int sqrt_check(int n, int f)
 {
-	if (i * i > n)
+	if (f * f == n)
+	{
+		return (f);
+	}
+	else if (f > n)
+	{
 		return (-1);
-
-	if (i * i == n)
-		return (i);
-
-	return (sqrt_helper(n, i + 1));
+	}
+	else
+	{
+		return (sqrt_check(n, f + 1));
+	}
 }
 
