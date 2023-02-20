@@ -43,28 +43,3 @@ char *str_concat(char *s1, char *s2)
 
 	return (concat);
 }
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-
-int main(void)
-{
-	char *s1 = "Hello";
-	char *s2 = "world!";
-	char *s3 = str_concat(s1, s2);
-
-	if (s3 == NULL)
-	{
-		printf("Failed to concatenate strings\n");
-		return (EXIT_FAILURE);
-	}
-
-	printf("%s\n", s3);
-
-	free(s3);
-
-	return (EXIT_SUCCESS);
-}
