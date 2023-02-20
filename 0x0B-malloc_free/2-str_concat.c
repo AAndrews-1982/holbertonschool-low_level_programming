@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
+ * str_concat - concatenates two strings.
  * @s1: the first string
  * @s2: the second string
  *
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[len2] != '\0')
 		len2++;
 
-		concat = malloc((len1 + len2 + 1) * sizeof(char));
+	concat = malloc((len1 + len2 + 1) * sizeof(char));
 	if (concat == NULL)
 	return (NULL);
 
