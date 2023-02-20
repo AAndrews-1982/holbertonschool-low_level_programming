@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings.
+ * str_concat - concatenates two strings
  * @s1: the first string
  * @s2: the second string
  *
@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 
 	concat = malloc((len1 + len2 + 1) * sizeof(char));
 	if (concat == NULL)
-	return (NULL);
+		return (NULL);
 
 	for (i = 0; i < len1; i++)
 		concat[i] = s1[i];
@@ -44,6 +44,12 @@ char *str_concat(char *s1, char *s2)
 	return (concat);
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+
 int main(void)
 {
 	char *s1 = "Hello";
@@ -52,8 +58,8 @@ int main(void)
 
 	if (s3 == NULL)
 	{
-	printf("Failed to concatenate strings\n");
-	return (EXIT_FAILURE);
+		printf("Failed to concatenate strings\n");
+		return (EXIT_FAILURE);
 	}
 
 	printf("%s\n", s3);
@@ -62,4 +68,3 @@ int main(void)
 
 	return (EXIT_SUCCESS);
 }
-
