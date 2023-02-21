@@ -3,7 +3,6 @@
  * Auth: Alton Andrews
  */
 
-#include "holberton.h"
 #include "main.h"
 
 /**
