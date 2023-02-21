@@ -11,11 +11,11 @@
  * Return: String length
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int length = 0;
 
-	while (s[length] != '\0')
+	while (str[length] != '\0')
 	{
 		length++;
 	}
