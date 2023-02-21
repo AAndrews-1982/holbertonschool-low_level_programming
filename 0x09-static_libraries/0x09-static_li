@@ -1,0 +1,9 @@
+#inlcude <stdio.h>
+#include <stdlib.h>
+#inclued <ctype.h>
+#include <string.h>
+int _atoi(char *s)
+
+{
+	return atoi(s);
+}
