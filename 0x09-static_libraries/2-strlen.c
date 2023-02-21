@@ -8,6 +8,7 @@
 /**
  * _strlen - Return the length of a string.
  * @s: char value
+ *
  * Return: String length
  */
 
