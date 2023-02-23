@@ -1,13 +1,9 @@
+#ifndef SIZE_H
+#define SIZE_H
+
 /*
- * File: 0-object_like_macro.h
- * Auth: Alton Andrews
+ * SIZE - abbreviation for the token 1024
  */
+#define SIZE 1024
 
-#include "size.h"
-
-int main(void) {
-    char buffer[SIZE];
-    // ...
-    return 0;
-}
-
+#endif /* SIZE_H */
