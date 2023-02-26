@@ -31,28 +31,3 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	return (ptr);
 }
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
-int main(void)
-{
-	int *arr;
-	unsigned int i;
-
-	arr = _calloc(5, sizeof(int));
-	if (arr == NULL)
-	{
-		printf("Memory allocation failed\n");
-		return (1);
-	}
-
-	for (i = 0; i < 5; i++)
-		printf("%d ", arr[i]);
-	free(arr);
-
-	return (0);
-}
