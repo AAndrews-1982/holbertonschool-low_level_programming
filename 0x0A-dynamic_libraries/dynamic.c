@@ -1,85 +1,171 @@
-#include "dynamic.h"
+#include <stdio.h>
 #include <stdlib.h>
 
-int _putchar(char c) {
+int _putchar(char c)
+{
     return putchar(c);
 }
 
-int _islower(int c) {
-    return (c >= 'a' && c <= 'z');
+int _islower(int c)
+{
+    return c >= 'a' && c <= 'z';
 }
 
-int _isalpha(int c) {
-    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+int _isalpha(int c)
+{
+    return _islower(c) || _isupper(c);
 }
 
-int _abs(int n) {
-    return (n < 0) ? -n : n;
+int _abs(int n)
+{
+    return n < 0 ? -n : n;
 }
 
-int _isupper(int c) {
-    return (c >= 'A' && c <= 'Z');
+int _isupper(int c)
+{
+    return c >= 'A' && c <= 'Z';
 }
 
-int _isdigit(int c) {
-    return (c >= '0' && c <= '9');
+int _isdigit(int c)
+{
+    return c >= '0' && c <= '9';
 }
 
-int _strlen(char *s) {
-    int i = 0;
-    while (s[i] != '\0') {
-        i++;
+int _strlen(char *s)
+{
+    int len = 0;
+    while (*s != '\0')
+    {
+        len++;
+        s++;
     }
-    return i;
+    return len;
 }
 
-void _puts(char *s) {
-    int i = 0;
-    while (s[i] != '\0') {
-        _putchar(s[i]);
-        i++;
+void _puts(char *s)
+{
+    while (*s != '\0')
+    {
+        _putchar(*s);
+        s++;
     }
     _putchar('\n');
 }
 
-char *_strcpy(char *dest, char *src) {
-    int i = 0;
-    while (src[i] != '\0') {
-        dest[i] = src[i];
-        i++;
+char *_strcpy(char *dest, char *src)
+{
+    char *orig_dest = dest;
+    while (*src != '\0')
+    {
+        *dest = *src;
+        dest++;
+        src++;
     }
-    dest[i] = '\0';
-    return dest;
+    *dest = '\0';
+    return orig_dest;
 }
 
-int _atoi(char *s) {
-    int result = 0;
+int _atoi(char *s)
+{
     int sign = 1;
-    int i = 0;
-    if (s[0] == '-') {
-        sign = -1;
-        i++;
+    int num = 0;
+    while (*s != '\0')
+    {
+        if (*s == '-')
+        {
+            sign = -1;
+        }
+        else if (_isdigit(*s))
+        {
+            num = num * 10 + (*s - '0');
+        }
+        else if (num > 0)
+        {
+            break;
+        }
+        s++;
     }
-    while (s[i] != '\0') {
-        result = result * 10 + s[i] - '0';
-        i++;
-    }
-    return sign * result;
+    return num * sign;
 }
 
-char *_strcat(char *dest, char *src) {
-    int dest_len = _strlen(dest);
-    int i = 0;
-    while (src[i] != '\0') {
-        dest[dest_len + i] = src[i];
-        i++;
+char *_strcat(char *dest, char *src)
+{
+    char *orig_dest = dest;
+    while (*dest != '\0')
+    {
+        dest++;
     }
-    dest[dest_len + i] = '\0';
-    return dest;
+    while (*src != '\0')
+    {
+        *dest = *src;
+        dest++;
+        src++;
+    }
+    *dest = '\0';
+    return orig_dest;
 }
 
-char *_strncat(char *dest, char *src, int n) {
-    int dest_len = _strlen(dest);
-    int i = 0;
-    while (
+char *_strncat(char *dest, char *src, int n)
+{
+    char *orig_dest = dest;
+    while (*dest != '\0')
+    {
+        dest++;
+    }
+    while (*src != '\0' && n > 0)
+    {
+        *dest = *src;
+        dest++;
+        src++;
+        n--;
+    }
+    *dest = '\0';
+    return orig_dest;
+}
 
+char *_strncpy(char *dest, char *src, int n)
+{
+    char *orig_dest = dest;
+    while (*src != '\0' && n > 0)
+    {
+        *dest = *src;
+        dest++;
+        src++;
+        n--;
+    }
+    while (n > 0)
+    {
+        *dest = '\0';
+        dest++;
+        n--;
+    }
+    return orig_dest;
+}
+
+int _strcmp(char *s1, char *s2)
+{
+    while (*s1 != '\0' && *s1 == *s2)
+    {
+        s1++;
+        s2++;
+    }
+    return (*s1 - *s2);
+}
+
+char *_memset(char *s, char b, unsigned int n)
+{
+    char *orig_s = s;
+    while (n > 0)
+    {
+        *s = b;
+        s++;
+        n--;
+    }
+    return orig_s;
+}
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+    char *orig_dest = dest;
+    while (n > 0)
+}
