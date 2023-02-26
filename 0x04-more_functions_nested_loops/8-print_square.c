@@ -7,7 +7,7 @@
 
 /**
  * print_square - Prints square followed by new line.
- * @Size: Size of square
+ * @size: Size of square
  * Description: Print squares with hashtags.
  */
 
