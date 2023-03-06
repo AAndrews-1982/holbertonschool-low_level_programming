@@ -3,7 +3,7 @@
 
 /**
  * print_elem - prints an integer
- * @elem: the integer to print
+ * @elem: integer to print
  *
  * Return: Nothing.
  */
@@ -14,7 +14,7 @@ void print_elem(int elem)
 
 /**
  * print_elem_hex - prints an integer, in hexadecimal
- * @elem: the integer to print
+ * @elem: integer to print
  *
  * Return: Nothing.
  */
