@@ -1,6 +1,6 @@
 /*
- * Auth: 3-get_op_func.c
- * File: Alton Andrews
+ * File: 3-get_op_func.c
+ * Auth: Alton Andrews
  */
 
 #include "3-calc.h"
