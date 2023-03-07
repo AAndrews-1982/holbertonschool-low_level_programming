@@ -1,10 +1,28 @@
-#ifndef FUNCTION_POINTERS_H
-#define FUNCTION_POINTERS_H
+/*
+ * File: 1-array_iterator.c
+ * Auth: Alton Andrews
+ */
 
+#include "function_pointers.h"
 #include <stddef.h>
 
-void print_name(char *name, void (*f)(char *));
-void array_iterator(int *array, size_t size, void (*action)(int));
-int int_index(int *array, int size, int (*cmp)(int));
+/**
+ * array_iterator - executes a function on each element of an array
+ * @array: the array to iterate over
+ * @size: the size of the array
+ * @action: a pointer to the function to use on each element of the array
+ *
+ * Return: Nothing.
+ */
+void array_iterator(int *array, size_t size, void (*action)(int))
+{
+	size_t i;
 
-#endif
+	if (array && action)
+	{
+		for (i = 0; i < size; i++)
+		{
+			action(array[i]);
+		}
+	}
+}
