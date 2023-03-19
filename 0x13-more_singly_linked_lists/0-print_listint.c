@@ -23,6 +23,5 @@ size_t print_listing(const listint_t *h)
 		h = h->next;
 		i++;
 	}
-
 	return (i);
 }
