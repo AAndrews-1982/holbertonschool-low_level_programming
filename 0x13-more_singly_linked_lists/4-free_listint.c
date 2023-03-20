@@ -1,8 +1,3 @@
-/*
- * File: 4-free_listint.c
- * Auth: Alton Andrews
- */
-
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
