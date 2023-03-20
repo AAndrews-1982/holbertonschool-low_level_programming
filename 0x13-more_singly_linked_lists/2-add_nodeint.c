@@ -1,8 +1,3 @@
-/*
- * File: 2-add_nodeint.c
- * Auth: Alton Andrews
- */
-
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
