@@ -1,8 +1,3 @@
-/*
- * File: 3-add_nodeint_end.c
- * Auth: Alton Andrews
- */
-
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
