@@ -8,24 +8,29 @@
  * @size: number of elements in array
  * @value: is the value to search for
  *
- * Return: If the value is found return the value. Return -1 if not or if array is NULL
+ * Description: Performs a linear search on an array of integers.
+ * Iterates through the array to find a specific value.
+ * If the array is NULL, returns -1.
+ *
+ * Return: The first index where value is located, or -1 if not found or array is NULL.
  */
 int linear_search(int *array, size_t size, int value)
 {
-	size_t index;
+    size_t index;
 
-	if (array == NULL)
-		return (-1);
+    if (array == NULL)
+    {
+        return (-1);
+    }
 
-	for (index = 0; index < size; index++)
-	{
-		if (array[index] == value)
-		{
-			printf("Value checked at index [%lu] = [%d]\n", index, array[index]);
-			return (index);
-		}
-		printf("Value checked at index [%lu] = [%d]\n", index, array[index]);
-	}
+    for (index = 0; index < size; index++)
+    {
+        printf("Value checked at index [%lu] = [%d]\n", index, array[index]);
+        if (array[index] == value)
+        {
+            return (int)index;
+        }
+    }
 
-	return (-1);
+    return (-1);
 }

@@ -5,7 +5,10 @@
 /**
  * main - Entry point
  *
- * Return: Always EXIT_SUCCESS
+ * Description: Main function to demonstrate linear search.
+ * Uses an array of integers and searches for specific values.
+ *
+ * Return: Always EXIT_SUCCESS.
  */
 int main(void)
 {
@@ -17,5 +20,6 @@ int main(void)
     printf("Found %d at index: %d\n\n", 3, linear_search(array, size, 3));
     printf("Found %d at index: %d\n\n", 42, linear_search(array, size, 42));
     printf("Found %d at index: %d\n", 999, linear_search(array, size, 999));
+
     return (EXIT_SUCCESS);
 }
