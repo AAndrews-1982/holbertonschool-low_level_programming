@@ -26,7 +26,7 @@ void print_array(const int *array, int left, int right)
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in the array
  * @value: value to search for
- * Return: the first index where value is located, or -1 if not found or array is NULL
+ * Return: the 1st index where value is located, -1 if not or array is NULL
  */
 int binary_search(int *array, size_t size, int value)
 {
